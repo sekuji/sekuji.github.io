@@ -8,6 +8,8 @@ html {
 
 body {
   background: #DDD7D1;
+  padding: 0;
+  margin: 0;
 }
 
 #map {
@@ -319,4 +321,8 @@ a.arrow:hover {
   #mc_embed_signup {
     text-align: center;
   }
+}
+
+#xqc {
+  width: 150px;
 }
