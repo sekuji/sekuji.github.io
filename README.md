@@ -5,5 +5,5 @@ repo made for ['is-a.dev'](https://github.com/sekuji/register) domain
 + http://sekuji.github.io/
 + https://sekuji.netlify.app
 
-## 🔗 ssh.so
+## 🔗 shh.so
 [![shh.so](https://shh.so/Images/prev.png)](https://shh.so/)
