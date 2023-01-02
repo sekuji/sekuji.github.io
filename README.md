@@ -1,5 +1,6 @@
 # sekuji.github.io
-nothing to find here
-
-repo setted up for 'is-a.dev' domain
+repo made for ['is-a.dev'](https://github.com/sekuji/register) domain
 + all redirects to https://shh.so/
+
+## 🔗 ssh.so
+[![shh.so](https://shh.so/Images/prev.png)](https://github.com/sekuji/register)
