@@ -7,4 +7,4 @@ repo made for ['is-a.dev'](https://github.com/sekuji/register) domain
 + http://shh-so-2gox.vercel.app/
 
 ## 🔗 sekuji.xyz
-[![shh.so](https://sekuji.xyz/Images/shhlogob.png)](https://sekuji.xyz){:height="100px" width="100px"}
+[![shh.so](https://sekuji.xyz/Images/shhlogob.png =100x)](https://sekuji.xyz)
