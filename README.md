@@ -5,5 +5,3 @@ repo made for ['is-a.dev'](https://github.com/sekuji/register) domain
 + http://sekuji.github.io/
 + https://sekuji.netlify.app
 + http://shh-so-2gox.vercel.app/
-
-## 🔗 sekuji.xyz
