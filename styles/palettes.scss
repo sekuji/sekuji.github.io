@@ -1,0 +1,18 @@
+$arkestar: (
+  dark: (
+    header:     rgb(235, 108, 187),
+    titles:     rgb(249, 191, 231),
+    text:       rgb(251, 228, 251),
+    background: rgb(8, 7, 9),
+    foreground: rgb(14, 10, 15),
+    search:     rgba(255, 255, 255, 0)
+  ),
+  light: (
+    header:     rgb(235, 108, 187),
+    text:       rgb(251, 228, 251),
+    titles:     rgb(249, 191, 231),
+    background: #fbe3f1,
+    foreground: #ffe8fa,
+    search:     rgba(255, 255, 255, 0)
+  )
+);
