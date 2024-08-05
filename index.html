@@ -23,7 +23,7 @@
           <div id="date"></div>
           
           <div class="search">
-            <form action="https://www.google.com/" method="get" autocomplete="off">
+            <form id="searchForm" action="https://www.google.com/search" method="get" autocomplete="off">
               <label for="q">></label>
               <input autofocus id="q" name="q" placeholder="search the web..." type="search">
             </form>
@@ -31,11 +31,11 @@
 
           <nav>
             <div class="category">
-              <h2>Random</h2>
+              <h2>Private</h2>
               <ul>
-                <li><a href="https://monkeytype.com/">Monkeytype</a></li>
-                <li><a href="https://saucenao.com/">SauceNAO</a></li>
-                <li><a href="https://lolalytics.com/">LoLalytics</a></li>
+                <li><a href="https://monkeytype.com/">Paypal</a></li>
+                <li><a href="https://saucenao.com/">Bank</a></li>
+                <li><a href="https://lolalytics.com/">Drive</a></li>
 
               </ul>
             </div>
@@ -68,11 +68,10 @@
             </div>
 
             <div class="category">
-              <h2>Dev</h2>
+              <h2>Random</h2>
               <ul>
-                <li><a href="https://github.com/">Github</a></li>
-                <li><a href="https://192.168.1.145">Vercel</a></li>
-                <li><a href="http://192.168.0.1/">G-Cloud</a></li>
+                <li><a href="https://lolalytics.com/">LoLalytics</a></li>
+                <li><a href="https://bypass.city/">Bypass-City</a></li>
               </ul>
             </div>
           </nav>
@@ -92,5 +91,21 @@
     </footer>
 
     <script src="scripts/visuals.js"></script>
+    <script>
+      document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const query = document.getElementById('q').value.trim();
+        if (query) {
+          this.submit();
+        }
+      });
+    
+      document.getElementById('q').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          document.getElementById('searchForm').dispatchEvent(new Event('submit'));
+        }
+      });
+    </script>
   </body>
 </html>
