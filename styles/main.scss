@@ -1,0 +1,221 @@
+@import "palettes.scss";
+
+$font-stack: "Space Mono", monospace;
+
+// TODO handle multiple themes
+:root {
+  --header:    rgb(255, 91, 154);
+  --titles:    rgb(255, 91, 154);
+  --text:      rgb(120, 89, 121);
+  --background:  rgb(255,210,245);
+  --foreground:  rgb(255,225,250);
+  --search:    rgba(255, 255, 255, 0);
+}
+
+.dark {
+  --header:     rgb(235, 108, 187);
+  --titles:     rgb(249, 191, 231);
+  --text:       rgb(251, 228, 251);
+  --background: rgb(8, 7, 9);
+  --foreground: rgb(14, 10, 15);
+  --search:     rgba(255, 255, 255, 0);
+}
+
+h1 {
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+h2 {
+  color: var(--header);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  transition: all 0.25s ease-out;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  background-color: var(--background);
+  color: var(--titles);
+  font-family: $font-stack;
+  
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  // TODO fix
+  transition: 0.25s ease-out;
+  will-change: background-color, color;
+}
+
+footer {
+  margin: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.52rem;
+
+  a {
+    color: var(--titles);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  a {
+    color: var(--text);
+    
+    &:hover {
+      color: var(--header);
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 75vw;
+  height: 350px;
+  max-width: 910px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  background-color: var(--foreground);
+  transition: 0.25s ease-out;
+}
+
+.rightNav {
+  width: 100%;
+  padding: 0 5ch;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+form {
+  margin: 1em 0;
+  position: relative;
+
+  input {
+    width: 100%;
+    margin-left: 1ch;
+
+    background-color: var(--search);
+    color: var(--titles);
+    font: inherit;
+    
+    border: none;
+    transition: all 0.2s;
+  }
+
+  label {
+    color: var(--titles);
+    position: absolute;
+    transition: all 0.4s;
+  }
+  
+  &:focus-within input::placeholder {
+    opacity: 0;
+  }
+}
+
+/*
+  Transitions
+*/
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: var(--background);
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    
+    &.fade-out {
+        opacity: 0;
+        animation-name: fade-out;
+    }
+    
+    &.fade-in { // TODO remove 
+        opacity: 1;
+        animation-name: fade-in;
+    }
+}
+
+@keyframes fade-out {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 90vw;
+
+    img {
+      width: 20vw;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    height: fit-content;
+    
+    nav {
+      flex-flow: row wrap;
+      gap: 1ch;
+    }
+
+    .rightNav {
+      padding: 5ch 5ch;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #main_window {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  form input[type="search"] {
+    width: 90%;
+  }
+}
