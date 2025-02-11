@@ -22,7 +22,11 @@ const images = [
   'a3.jpg',
   'a4.jpg',
   'a5.jpg',
-  'a6.jpg'
+  'a6.jpg',
+  'a7.jpeg',
+  'a8.jpeg',
+  'a9.jpeg',
+  'a10.jpeg'
 ];
 
 /**
